@@ -1,0 +1,25 @@
+.card {
+    border: 1px solid black;
+    position: relative;
+    top:100px;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: antiquewhite;
+
+    >img {
+        width: 100px;
+        object-fit: cover;
+    }
+}
+
+        .container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.col-6{
+    border-radius: 60px;
+}
