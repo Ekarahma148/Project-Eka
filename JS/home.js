@@ -1,5 +1,5 @@
 async function get() {
-    await fetch('https://www.googleapis.com/books/v1/volumes?q=buku+tereliye')
+    await fetch('https://www.googleapis.com/books/v1/volumes?q=buku&maxResults=40')
       .then((response) => response.json())
       .then((result) => {
         result.items.forEach((book) => {

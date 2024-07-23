@@ -1,4 +1,4 @@
-fetch('https://www.googleapis.com/books/v1/volumes?q=buku')
+fetch ('https://www.googleapis.com/books/v1/volumes?q=buku')
 
 
 let katakunci = document.querySelector("input#search");
@@ -7,7 +7,7 @@ async function searchBooks() {
   console.log("Mencari...");
   const container = document.querySelector("div.container");
   container.innerText = "";
-  const url = `https://www.googleapis.com/books/v1/volumes?q=${katakunci.value}`;
+  const url = `https://www.googleapis.com/books/v1/volumes?q=${katakunci.value}&maxResults=20`;
   try {
     const response = await fetch(url);
     const result = await response.json();

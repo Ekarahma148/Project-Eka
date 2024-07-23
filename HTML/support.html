@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kritik dan Saran</title>
+    <link rel="stylesheet" href="/CSS/home.css" />
+    <link rel="stylesheet" href="/CSS/form.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="judul">
+            <h1>MY BOOK'S</h1>
+        </div>
+        <div class="div1">
+            <div class="col-6">
+                <a href="cari.html">
+                    <input type="text" id="search" placeholder="Search books...">
+                    <button onclick="searchBooks();"> cari</button></a>
+            </div>
+            <nav class="menu">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="support.html">SUPPORT</a>
+            </nav>
+        </div>
+    </header>
+
+    <video id="bg-video" autoplay muted loop>
+        <source src="/media/perpus.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <form>
+        <fieldset>
+            <label for="fname">Nama :</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Usia :</label><br>
+            <input type="number" id="lname" name="lname"><br><br>
+            <label for="lname">Kritik/Saran :</label><br>
+            <textarea name="kritik" rows="5" cols="30" required></textarea><br>
+            <input type="submit" value="Kirim">
+        </fieldset>
+    </form>
+    <footer class="footer">
+        <div class="info">
+            <h2>Informasi</h2>
+            <p>My Books memberikan akses ke jutaan buku dari seluruh dunia melalui integrasi dengan Google Books API.</p>
+        </div>
+        <div class="contact">
+            <h2>Hubungi Kami</h2>
+            <p>Email: info@mybooks.com</p>
+            <p>Telepon: +1234567890</p>
+        </div>
+        <div class="follow">
+            <h2>Ikuti Kami</h2>
+            <p>Twitter: @MyBooks</p>
+            <p>Instagram: @MyBooks</p>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 My Books. Hak cipta dilindungi undang-undang.</p>
+        </div>
+    </footer>
+</body>
+
+
+</body>
+
+</html>
