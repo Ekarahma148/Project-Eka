@@ -1,3 +1,4 @@
+/* CSS UNTUK BODY */
 body {
     font-family: "DM Serif Display", serif;
     background-color: #E493B3;
@@ -5,31 +6,29 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     line-height: 1.6;
-        min-width: 100%;
-    min-height: 100%;
-    /* overflow:hidden; */
-
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
 }
-
+/* CSS UNTUK BACKGROUND VIDEO */
 #bg-video {
     position: fixed;
     top: 30px;
     left: 0;
     right: 0;
-    width:auto;
+    width: auto;
     height: auto;
     min-width: 100%;
     min-height: 100%;
-
     z-index: -200;
 }
-
+/* CSS UNTUK HEADER */
 header {
     position: sticky;
-    top:0;
+    top: 0;
     margin: 0 auto;
     width: 100%;
     background-color: #8E7AB5;
@@ -38,49 +37,58 @@ header {
     height: auto;
     display: flex;
     justify-content: space-between;
-    /* padding: 10px 50px; */
     padding-right: 50px;
 }
-
+/* CSS UNTUK JUDUL YANG DI HEADER */
 .judul {
     font-size: 15px;
 }
-
-.div1 {
+/* CSS UNTUK NAVIGASI */
+.div-1 {
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
-
+.div-1 a{
+    text-decoration: none;
+}
+/* CSS UNTUK KALIMAT DIATAS BOX */
+.div-2 {
+    font-size: xx-large;
+    margin: 70px 0 0;
+    color: #0c0b0b;
+    padding: 0px;
+}
+/* CSS UNTUK NAVIGASI MENU */
 .menu a {
-    color: black;
+    color: #E493B3;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 3px;
     transition: background-color 0.3s ease;
 }
-
+/* CSS KETIKA CURSOR DI MENU MAKA BACKGROUNDNYA BERUBAH  */
 .menu a:hover {
-    background-color: #555;
+    background-color: #d4c3d6;
 }
-
-.col-6 {
+/* CSS UNTUK CARI */
+.cari {
     display: flex;
     align-items: center;
 }
 
-.col-6 input[type="text"] {
+.cari input[type="text"] {
     padding: 8px;
     margin-right: -50px;
     border: 1px solid #ccc;
     border-radius: 30px;
 }
-
-.col-6 button {
+/* CSS UNTUK BUTTON CARI */
+.cari button {
     padding: 8px 15px;
     background-color: #E493B3;
     color: white;
@@ -88,48 +96,42 @@ header {
     border-radius: 30px;
     cursor: pointer;
 }
-
+/* CSS UNTUK MEMBUNGKUS BOX YANG AKAN DITAMPILKAN DI HOME  */
+/* CSS UNTUK BOX/YANG MEMBUNGKUS COVER BUKU DAN JUDUL BUKU */
 .box {
     display: inline-flex;
-    /* flex-wrap: wrap; */
-    /* position: relative;
-    top: 300px; */
-    /* bottom:200px; */
-    margin: 10px 0px;
+    margin: 20px 0px;
     padding: 10px;
     border: 10px solid #887e7e;
     width: 150px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
-    /* padding: 1rem; */
     justify-content: center;
 }
-
+/* CSS UNTUK GAMBAR/COVER BUKU */
 .book-image {
     width: 80px;
     height: 130px;
     justify-content: center;
 }
-
+/* CSS UNTUK JUDUL BUKU */
 .book-title {
     padding: 10px;
     text-align: center;
 }
-
 #container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1200px;
-    margin: 80px 10px 0px;
+    max-width: 100%;
+    margin: 10px 10px 0px;
 
 }
 
+
 .bg {
-    /* position: relative;
-    top: 130px; */
-    margin: 20px 0px ;
+    margin: 20px 0px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     padding: 1rem;
@@ -145,7 +147,7 @@ header {
 .container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 130px;
+    margin-top: 50px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(0);
     padding: 1rem;
@@ -156,24 +158,39 @@ header {
 
 /* Footer styling */
 .footer {
-    margin: 150px 0px 0px;
+    margin-top: 150px;
+    /* Sesuaikan margin sesuai kebutuhan */
     background-color: #8E7AB5;
-    color: white;
+    color: #E493B3;
     text-align: center;
     padding: 10px 0;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    flex-direction: row;
+    /* Default direction, bisa dihapus karena sudah default */
 }
-
+.footer a{
+    text-decoration: none;
+}
 .footer .info,
 .footer .contact,
-.footer .follow,
-.footer .copyright {
-    flex: 1 1 300px; /* Mengatur flex-grow, flex-shrink, dan flex-basis */
-    padding: 0 20px;
+.footer .follow {
+    flex: 1 1 90px;
+    /* Mengatur flex-grow, flex-shrink, dan flex-basis */
+    padding: 0 10px;
+    /* Sesuaikan padding sesuai kebutuhan */
     margin: 5px 0;
+    /* Sesuaikan margin sesuai kebutuhan */
+}
+
+.footer .copyright {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 10px 0;
+    /* Sesuaikan padding sesuai kebutuhan */
+    margin-top: 5px;
+    /* Sesuaikan margin sesuai kebutuhan */
 }
 
 .footer h2 {
@@ -181,51 +198,3 @@ header {
     margin-bottom: 5px;
 }
 
-.footer p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer .info,
-    .footer .contact,
-    .footer .follow,
-    .footer .copyright {
-        flex: 1 1 100%;
-        margin: 10px 0;
-    }
-}
-
-
-/* Responsive design */
-@media (max-width: 768px) {
-    header .div1 {
-        flex-direction: column;
-    }
-
-    header .col-6 {
-        margin-bottom: 10px;
-    }
-
-    header .menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header .menu a {
-        padding: 8px 15px;
-        margin: 5px;
-    }
-}
-
-@media (max-width: 600px) {
-    header .col-6 input[type="text"] {
-        width: 150px;
-    }
-}

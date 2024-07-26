@@ -1,52 +1,66 @@
-fetch ('https://www.googleapis.com/books/v1/volumes?q=buku')
-
-
+// Ambil elemen input dengan id 'search'
 let katakunci = document.querySelector("input#search");
 
+// Fungsi untuk mencari buku berdasarkan kata kunci
 async function searchBooks() {
+  // Log ke konsol untuk menandakan awal pencarian
   console.log("Mencari...");
+
+  // Ambil elemen div dengan kelas 'container' untuk menampilkan hasil pencarian
   const container = document.querySelector("div.container");
+  // Kosongkan konten container sebelum menampilkan hasil baru
   container.innerText = "";
-  const url = `https://www.googleapis.com/books/v1/volumes?q=${katakunci.value}&maxResults=20`;
+
+  // Buat URL untuk permintaan API dengan kata kunci pencarian dari input
+  const url = `https://www.googleapis.com/books/v1/volumes?q=${katakunci.value}&maxResults=32`;
+
   try {
+    // Lakukan permintaan fetch ke URL API
     const response = await fetch(url);
+    // Konversi respons API menjadi JSON
     const result = await response.json();
-    // console.log(result)
+
+    // Log ke konsol untuk menandakan bahwa data berhasil diambil
     console.log("Berhasil");
+
+    // Iterasi melalui setiap buku dalam hasil pencarian
     result.items.map((book) => {
-      // biar pemanggilan attribut nya tidak terlalu panjang
-      //   ini karena mau nampilin title, author sama thumbail nya saja
-      //   bebas nantimah kalo mau manggil yang lainnya juga, ini hanya contoh
-      // kalo mau liat properti yang lain, tinggal di console.log() aja 'book' nya
-      //   console.log(book);
+      // Ambil informasi buku dari volumeInfo
       const infoBook = book.volumeInfo;
       console.log(infoBook);
 
+      // Buat elemen div untuk setiap buku dengan kelas 'card'
       const card = document.createElement("div");
       card.classList.add("card");
 
+      // Buat elemen h4 untuk judul buku dan tambahkan ke card
       const title = document.createElement("h4");
       title.textContent = infoBook.title;
 
+      // Buat elemen p untuk penulis buku dan tambahkan ke card
       const author = document.createElement("p");
-      author.textContent = infoBook.authors;
+      // Jika ada beberapa penulis, gabungkan mereka dengan koma
+      author.textContent = infoBook.authors ? infoBook.authors.join(", ") : "Unknown author";
 
-      // const description = document.createElement("p");
-      // description.textContent = infoBook.description ? infoBook.description.slice(0, 200) + "..." : "No description available.";
-
+      // Buat elemen img untuk sampul buku dan tambahkan ke card
       const cover = document.createElement("img");
       //   tanda tanya disini buat mencegah error di console log
       // jadi nanti properti nya di cek, jika ada properti yang namanya thumbnail, maka di tampilin isinya
       // jika gak ada, nanti jadi null isi nya atau kosong
-      cover.src = infoBook.imageLinks?.thumbnail;
+      cover.src = infoBook.imageLinks?.thumbnail || "default-image.jpg"; // Gunakan gambar default jika thumbnail tidak tersedia
+      cover.alt = infoBook.title;
 
+      // Tambahkan elemen title, author, dan cover ke dalam card
       card.appendChild(title);
       card.appendChild(author);
       card.appendChild(cover);
-      // card.appendChild(description);
+
+      // Tambahkan card ke dalam container
       container.appendChild(card);
     });
   } catch (error) {
-    console.error(error);
+    // Log error ke konsol jika terjadi masalah dengan fetch
+    console.error("Terjadi kesalahan:", error);
   }
 }
+

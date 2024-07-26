@@ -1,0 +1,49 @@
+/* CSS UNTUK KRITIK/SARAN */
+form {
+    max-width: 300px; /* maksimum lebar form adalah 300px */
+    margin: 50px 100px 0px; /* margin: atas 50px, kanan dan kiri masing-masing 100px, bawah 0px */
+    background-color: #e7b4e7; /* warna latar belakang form */
+    padding: 20px; /* padding di dalam form sebesar 20px */
+    border-radius: 8px; /* border radius sudut form sebesar 8px */
+    text-align: center;
+}
+
+/* CSS UNTUK LABEL  */
+.form label {
+    display: block; /* membuat label menjadi blok (setiap label di bawah satu sama lain) */
+    font-weight: bold; /* tebalkan teks label */
+    margin-bottom: 5px; /* margin bawah label sebesar 5px */
+}
+
+/* CSS UNTUK INPUT NAMA,USIA,KRITIK/SARAN */
+.form input[type="text"],
+.form input[type="number"],
+.form textarea {
+    width: 100%; /* lebar input dan textarea 100% dari parent (form) */
+    padding: 8px; /* padding di dalam input dan textarea sebesar 8px */
+    font-size: 14px; /* ukuran teks di input dan textarea 14px */
+    border: 1px solid #696363; /* border input dan textarea tebal 1px solid abu-abu */
+    border-radius: 4px; /* border radius sudut input dan textarea sebesar 4px */
+    box-sizing: border-box; /* mengatur box-sizing menjadi border-box agar padding tidak mempengaruhi lebar total */
+}
+
+/* CSS UNTUK TEXT DI DALAM KOLOM KRITIK/SARAN */
+.form textarea {
+    resize: vertical; /* izinkan textarea untuk diresize secara vertikal */
+    height: 100px; /* tinggi awal textarea adalah 100px */
+}
+
+/* CSS UNTUK TOMBOL KIRIM */
+.form button {
+    padding: 10px 20px; /* padding di dalam tombol sebesar 10px atas-bawah dan 20px kanan-kiri */
+    background-color: #8E7AB5; /* warna latar belakang tombol */
+    color: #fff; /* warna teks di dalam tombol putih */
+    border: none; /* hilangkan border tombol */
+    border-radius: 4px; /* border radius sudut tombol sebesar 4px */
+    cursor: pointer; /* ubah cursor menjadi pointer saat mengarahkan ke tombol */
+}
+
+/* CSS UNTUK TOMBOL KETIKA DITEKAN */
+.form button:hover {
+    background-color: #6B548E; /* ubah warna latar belakang tombol saat dihover */
+}
