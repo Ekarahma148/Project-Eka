@@ -39,7 +39,8 @@
     .footer .follow,
     .footer .copyright {
         flex: 1 1 100%;
-        margin: 10px 0;
+        margin: 5px 0;
+        text-align: center;
     }
 }
 /* RESPONSIVE PADA UKURAN MAKSIMAL 425PX */
@@ -70,7 +71,7 @@
     .footer .follow,
     .footer .copyright {
         flex: 1 1 85%;
-        margin: 8px 0;
+        margin: 4px 0;
     }
 }
 /* RESPONSIVE PADA UKURAN MAKSIMAL 375PX */
@@ -101,7 +102,7 @@
     .footer .follow,
     .footer .copyright {
         flex: 1 1 75%;
-        margin: 6px 0;
+        margin: 3px 0;
     }
 }
 /* RESPONSIVE PADA UKURAN MAKSIMAL 320PX */
@@ -131,6 +132,6 @@
     .footer .follow,
     .footer .copyright {
         flex: 1 1 65%;
-        margin: 4px 0;
+        margin: 2px 0;
     }
 }

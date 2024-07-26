@@ -5,7 +5,7 @@ form {
     background-color: #e7b4e7; /* warna latar belakang form */
     padding: 20px; /* padding di dalam form sebesar 20px */
     border-radius: 8px; /* border radius sudut form sebesar 8px */
-    text-align: center;
+    text-align: center; /* mengatur teks di form menjadi rata tengah */
 }
 
 /* CSS UNTUK LABEL  */

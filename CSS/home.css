@@ -12,6 +12,7 @@ body {
     overflow-x: hidden;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 /* CSS UNTUK BACKGROUND VIDEO */
 #bg-video {
